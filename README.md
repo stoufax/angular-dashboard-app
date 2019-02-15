@@ -1,44 +1,63 @@
-# AngularCoreWorkshop
+# Angular Core
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
+We are going to use the Angular CLI and NRWL Extensions extensively to streamline development and free us up to focus on core concepts.
 
-## Nrwl Extensions for Angular (Nx)
+Follow the steps below to get started!
 
-<a href="https://nrwl.io/nx"><img src="https://preview.ibb.co/mW6sdw/nx_logo.png"></a>
+## The Stack
 
-Nx is an open source toolkit for enterprise Angular applications.
+### NRWL Workspace
+A NRWL workspace contains one or all of you Angular projects and libraries. It creates a monorepo for your applications domains. Nx helps add extra layer of tooling that can help manage your enterprise applications. 
 
-Nx is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
+External Video Reference: [Angular in a Microservices world](https://www.youtube.com/watch?v=d04U7SjORTI)
 
-## Quick Start & Documentation
+### Angular Material
+Angular Material is a UI library for Angular that gives you access to a modern material UI that works across web, mobile, and desktop applications with minimal custom CSS and setup.
 
-[Watch a 5-minute video on how to get started with Nx.](http://nrwl.io/nx)
+### JSON Server
+Creates a quick and simple way to mock out a backend REST service. We can then deliver some mocked out data in JSON format to make sure everything is working as expected once our real backend is connected.
 
-## Generate your first application
+## Getting Started
 
-Run `ng generate app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace. Read more [here](http://nrwl.io/nx).
+An Nx workspace is an Angular CLI project that has been enhanced to be enterprise ready. Being an Angular CLI project means it will be handy to have the Angular CLI installed globally, which can be done via npm or yarn as well.
 
-## Development server
+```
+npm install -g @angular/cli
+```
 
-Run `ng serve --project=myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> Note: If you do not have the Angular CLI installed globally you may not be able to use ng from the terminal to run CLI commands within the project. But the package.json file comes with npm scripts to run ng commands, so you can run npm start to ng serve and you can run npm run ng <command> to run any of the ng commands.
 
-## Code scaffolding
+After you have installed the Angular CLI, install `@nrwl/schematics`.
 
-Run `ng generate component component-name --project=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+npm install -g @nrwl/schematics
+```
 
-## Build
+After installing it you can create a new Nx workspace by running:
 
-Run `ng build --project=myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+create-nx-workspace angular-core-app
+```
 
-## Running unit tests
+The next step is to generate an app in your workspace. Do so by running:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng generate app dashboard
+```
 
-## Running end-to-end tests
+You'll then be prompted to answer a few setup questions. Run the following for each question:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+` In which directory should the application be generated? `   apps
 
-## Further help
+` Would you like to add Angular routing?`  yes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+` Which Unit Test Runner would you like to use for the application? `  Karma
+
+` Which E2E Test Runner would you like to use for the application? `  Protractor
+
+
+Lastly, please install the npm dependencies by running:
+```
+npm install
+```
+You are good to go!
