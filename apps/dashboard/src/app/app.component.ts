@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Core';
-  debug(bug){
-    console.log(bug)
-  }
+  links = [
+    {path:'/', icon:'home', title:'Home'},
+    {path:'/customers', icon:'face', title:'Customer'},
+    {path:'/projects', icon:'work', title:'Projects'},
+    
+  ]
 }

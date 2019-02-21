@@ -19,13 +19,13 @@ import { UiLoginModule } from '@angular-core-workshop/ui-login';
   imports: [
     BrowserModule,
     NxModule.forRoot(),
-    AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     HomeModule,
     ProjectsModule,
     CustomersModule,
-    UiLoginModule
+    UiLoginModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
